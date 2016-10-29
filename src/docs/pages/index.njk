@@ -1,0 +1,79 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+  <div id="top" role="document">
+
+    {% include "header.njk" %}
+
+    <main role="main">
+      <header>
+        <h2>{{ package.description }}</h2>
+        <div class="row margin-bottom-1">
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+        </div><!-- /row -->
+        <div class="row margin-bottom-1">
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+        </div><!-- /row -->
+        <div class="row margin-bottom-1">
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+        </div><!-- /row -->
+        <div class="row margin-bottom-1">
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+        </div><!-- /row -->
+      </header>
+      <article>
+        <section>
+          <h2>Installation</h2>
+<pre>Download: https://github.com/heyallan/{{ package.name }}/archive/master.zip</pre>
+<pre><code>&lt;!-- CDN Development (always latest) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/{{ package.name }}/dist/html.min.css&quot;/&gt;
+</code></pre>
+<pre><code>&lt;!-- CDN Production (specific release) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/html.min.css&quot;/&gt;
+</code></pre>
+<pre><code># npm package
+$ npm install --save-dev {{ package.name }}
+</code></pre>
+<pre><code>/* CSS import */
+@import url(&quot;https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/html.min.css&quot;);
+</code></pre>
+        </section>
+      </article>
+      <footer>
+        <hr>
+        <p>
+          <a href="https://twitter.com/intent/tweet/?&text={{ package.description | urlencode }}%20»&url={{ package.homepage }}&via={{ package.author.twitter }}"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000" alt="Tweet this" /></a>
+          <a href="{{ package.repository.url }}"><img src="https://img.shields.io/github/stars/heyallan/html.css.svg?style=social&label=Stars&maxAge=2592000" alt="Fork me on GitHub" /></a>
+        </p>
+      </footer>
+    </main><!-- role main -->
+  </div><!-- role document -->
+
+{% endblock %}

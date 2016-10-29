@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>hyperflexbox - Flexbox grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/html.css/dist/html.min.css"/>
+    <link rel="stylesheet" href="styles.min.css"/>
+    <style>
+      .border-1 { border: 1px solid rgba(179, 157, 219,1.0); }
+      .bg-primary { background-color: rgba(179, 157, 219,0.5); }
+      .padding-1 { padding: 1rem; }
+      .margin-bottom-1 { margin-bottom: 1rem; }
+      .row, strong { font-family: monospace; font-weight: normal; }
+    </style>
+  </head>
+  <body>
+    
+
+  <div id="top" role="document">
+
+    <header role="banner">
+  <h1>
+    
+    <svg width="30" height="30" viewBox="0 0 30 30" style="transform: translateY(3px)">
+      <defs>
+        <linearGradient id="gradient">
+          <stop offset="0%"  stop-color="#3498db"/>
+          <stop offset="70%" stop-color="#9b59b6"/>
+        </linearGradient>
+      </defs>
+      <text x="0" y="28" fill="url(#gradient)" style="font-weight:700;font-size:45px;">
+        ⬔
+      </text>
+    </svg>
+    {hyperflexbox}
+  </h1>
+  <nav role="navigation">
+  <a href="./">Home</a>
+  /
+  <a href="./grid.html">Grid</a>
+  /
+  <a href="https://github.com/heyallan/hyperflexbox#readme">Repository</a>
+  /
+  Author
+  <img src="logo-twitter.svg" alt="twitter" width="15" /><a href="https://twitter.com/heyallanmoreno">@heyallanmoreno</a>
+</nav>
+
+</header>
+
+
+    <main role="main">
+      <header>
+        <h2>Flexbox grid</h2>
+        <div class="row margin-bottom-1">
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+        </div><!-- /row -->
+        <div class="row margin-bottom-1">
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+        </div><!-- /row -->
+        <div class="row margin-bottom-1">
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+        </div><!-- /row -->
+        <div class="row margin-bottom-1">
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+          <div class="col-xs">
+            <div class="padding-1 border-1 bg-primary"></div>
+          </div><!-- /col -->
+        </div><!-- /row -->
+      </header>
+      <article>
+        <section>
+          <h2>Installation</h2>
+<pre>Download: https://github.com/heyallan/hyperflexbox/archive/master.zip</pre>
+<pre><code>&lt;!-- CDN Development (always latest) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/hyperflexbox/dist/html.min.css&quot;/&gt;
+</code></pre>
+<pre><code>&lt;!-- CDN Production (specific release) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/hyperflexbox@1.0.0/dist/html.min.css&quot;/&gt;
+</code></pre>
+<pre><code># npm package
+$ npm install --save-dev hyperflexbox
+</code></pre>
+<pre><code>/* CSS import */
+@import url(&quot;https://unpkg.com/hyperflexbox@1.0.0/dist/html.min.css&quot;);
+</code></pre>
+        </section>
+      </article>
+      <footer>
+        <hr>
+        <p>
+          <a href="https://twitter.com/intent/tweet/?&text=Flexbox%20grid%20»&url=https://github.com/heyallan/hyperflexbox#readme&via=heyallanmoreno"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000" alt="Tweet this" /></a>
+          <a href="git+https://github.com/heyallan/hyperflexbox.git"><img src="https://img.shields.io/github/stars/heyallan/html.css.svg?style=social&label=Stars&maxAge=2592000" alt="Fork me on GitHub" /></a>
+        </p>
+      </footer>
+    </main><!-- role main -->
+  </div><!-- role document -->
+
+
+  </body>
+</html>

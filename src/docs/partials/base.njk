@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ package.name }} - {{ package.description }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/html.css/dist/html.min.css"/>
+    <link rel="stylesheet" href="styles.min.css"/>
+    <style>
+      .border-1 { border: 1px solid rgba(179, 157, 219,1.0); }
+      .bg-primary { background-color: rgba(179, 157, 219,0.5); }
+      .padding-1 { padding: 1rem; }
+      .margin-bottom-1 { margin-bottom: 1rem; }
+      .row, strong { font-family: monospace; font-weight: normal; }
+    </style>
+  </head>
+  <body>
+    {% block content %}
+      {# content will be injected here #}
+    {% endblock %}
+  </body>
+</html>
