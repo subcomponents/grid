@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>hyper-grid - CSS grid with flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/html.css/dist/html.min.css"/>
+    <link rel="stylesheet" href="styles.min.css"/>
+    <style>
+      .bg-primary { background-color: rgba(179, 157, 219,0.5); }
+      .border-1 { border: 1px solid rgba(179, 157, 219,1.0); }
+      .padding-1 { padding: 1rem; }
+      .padding-y-1 { padding-top: 1rem; padding-bottom: 1rem; }
+      .margin-bottom-1 { margin-bottom: 1rem; }
+      .text-align-center { text-align: center; }
+      .icon { vertical-align: middle; }
+      code { background-color: transparent; padding: 0; color: inherit; }
+    </style>
+  </head>
+  <body>
+    
+
+  <div id="top" role="document">
+
+    <header role="banner">
+  <h1>
+    
+    <svg width="30" height="30" viewBox="0 0 30 30" style="transform: translateY(3px)">
+      <defs>
+        <linearGradient id="gradient">
+          <stop offset="0%"  stop-color="#3498db"/>
+          <stop offset="70%" stop-color="#9b59b6"/>
+        </linearGradient>
+      </defs>
+      <text x="0" y="28" fill="url(#gradient)" style="font-weight:700;font-size:45px;">
+        ⬔
+      </text>
+    </svg>
+    {hyper-grid}
+  </h1>
+  <nav role="navigation">
+  <a href="./">Home</a>
+  /
+  <a href="./usage.html">Usage</a>
+  /
+  <a href="https://github.com/heyallan/hyperflexbox">Repository</a>
+  /
+  Author
+  <img src="logo-twitter.svg" alt="twitter" width="15" /><a href="https://twitter.com/heyallanmoreno">@heyallanmoreno</a>
+</nav>
+
+</header>
+
+    <br>
+
+    <main role="main">
+      <article>
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;overflow:visible;"><path d="M0 2.5 L16 2.5"></path><path d="M0 8 L16 8"></path><path d="M0 13.5 L16 13.5"></path></svg>
+          Rows and columns (12)
+        </h2>
+        <code>.row</code>
+        <div class="row bg-primary padding-y-1">
+          <div class="col-xs-4">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-4</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-4">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-4</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-4">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-4</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </article>
+      <br><br>
+
+      <article>
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;overflow:visible;"><path d="M8 1.5 L14.5 8 L8 14.5 L1.5 8 z"></path></svg>
+          Auto-widths
+        </h2>
+        <code>.row</code>
+        <div class="row bg-primary padding-y-1">
+          <div class="col-md-auto">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-auto</code></div>
+          </div><!-- /.col -->
+          <div class="col-md-auto">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-auto</code></div>
+          </div><!-- /.col -->
+          <div class="col-md-auto">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-auto</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </article>
+      <br><br>
+
+      <article>
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;overflow:visible;"><path d="M5 1.0606601717798212 L11.939339828220179 8 L5 14.939339828220179"></path></svg>
+          Offsets (11)
+        </h2>
+        <code>.row</code>
+        <div class="row bg-primary padding-y-1">
+          <div class="col-xs-4 col-xs-offset-2">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-offset-2</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </article>
+      <br><br>
+
+      <article>
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;overflow:visible;"><path d="M0 8 L14.5 8"></path><path d="M7.560660171779821 1.0606601717798212 L14.5 8 L7.560660171779821 14.939339828220179"></path></svg>
+          Justify horizontal</h2>
+        <code>.row.justify-xs-center</code>
+        <div class="row justify-xs-center bg-primary padding-y-1">
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+        <br>
+        <code>.row.justify-xs-right</code>
+        <div class="row justify-xs-right bg-primary padding-y-1">
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+        <br>
+        <code>.row.justify-xs-around</code>
+        <div class="row justify-xs-around bg-primary padding-y-1">
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+        <br>
+        <code>.row.justify-xs-between</code>
+        <div class="row justify-xs-between bg-primary padding-y-1">
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-3">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-3</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </article>
+      <br><br>
+
+      <article>
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;overflow:visible;"><path d="M8 0 L8 14.5"></path><path d="M1.0606601717798212 7.560660171779821 L8 14.5 L14.939339828220179 7.560660171779821"></path></svg>
+          Align vertical
+        </h2>
+        <code>.row.align-xs-top</code>
+        <div class="row align-xs-top bg-primary padding-y-1" style="min-height:150px;">
+          <div class="col-xs-12">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-12</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+        <br>
+        <code>.row.align-xs-center</code>
+        <div class="row align-xs-center bg-primary padding-y-1" style="min-height:150px;">
+          <div class="col-xs-12">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-12</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+        <br>
+        <code>.row.align-xs-bottom</code>
+        <div class="row align-xs-bottom bg-primary padding-y-1" style="min-height:150px;">
+          <div class="col-xs-12">
+            <div class="border-1 bg-primary padding-1"><code>.col-xs-12</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </article>
+      <br><br>
+
+      <article>
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;overflow:visible;"><path d="M1.5 13 L14.5 13 L8 1.7416697508022985 z"></path></svg>
+          Order
+        </h2>
+        <code>.row</code>
+        <div class="row bg-primary padding-y-1">
+          <div class="col-xs-4 order-xs-last">
+            <div class="border-1 bg-primary padding-1"><code>.order-xs-last (1)</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-4">
+            <div class="border-1 bg-primary padding-1"><code>2</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-4">
+            <div class="border-1 bg-primary padding-1"><code>3</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+        <br>
+        <code>.row</code>
+        <div class="row bg-primary padding-y-1">
+          <div class="col-xs-4">
+            <div class=" border-1 bg-primary padding-1"><code>1</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-4">
+            <div class=" border-1 bg-primary padding-1"><code>2</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-4 order-xs-first">
+            <div class=" border-1 bg-primary padding-1"><code>.order-xs-first (3)</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+        <br>
+        <code>.row.row-reverse</code>
+        <div class="row row-reverse bg-primary padding-y-1">
+          <div class="col-xs-4">
+            <div class="border-1 bg-primary padding-1"><code>1</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-4">
+            <div class="border-1 bg-primary padding-1"><code>2</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs-4">
+            <div class="border-1 bg-primary padding-1"><code>3</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+        <br>
+        <code>.row.column-reverse</code>
+        <div class="row column-reverse justify-xs-center bg-primary padding-y-1">
+          <div class="col-xs">
+            <div class="border-1 bg-primary padding-1"><code>1</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs">
+            <div class="border-1 bg-primary padding-1"><code>2</code></div>
+          </div><!-- /.col -->
+          <div class="col-xs">
+            <div class="border-1 bg-primary padding-1"><code>3</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </article>
+      <br><br>
+
+      <article>
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;overflow:visible;"><path d="M3 1.5 L3 14.5 L14.258330249197702 8 z"></path></svg>
+          Breakpoints
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th><code>Class</code></th>
+              <th><code>Scope</code></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>{class}-xs-</code></td>
+              <td><code>&gt;0em</code></td>
+            </tr>
+            <tr>
+              <td><code>{class}-sm-</code></td>
+              <td><code>&gt;34em (544px)</code></td>
+            </tr>
+            <tr>
+              <td><code>{class}-md-</code></td>
+              <td><code>&gt;48em (768px)</code></td>
+            </tr>
+            <tr>
+              <td><code>{class}-lg-</code></td>
+              <td><code>&gt;64em (1024px)</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <br><br>
+
+      <article>
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20" height="20" fill="none" stroke="currentcolor" stroke-width="3" style="display:inline-block;overflow:visible;"><path d="M1.5 1.5 L14.5 1.5 L14.5 14.5 L1.5 14.5 z"></path></svg>
+          Containers
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th><code>Class</code></th>
+              <th><code>Width</code></th>
+              <th><code>Max width</code></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.container</code></td>
+              <td><code>auto</code></td>
+              <td><code>1200px</code></td>
+            </tr>
+            <tr>
+              <td><code>.container-fluid</code></td>
+              <td><code>100%</code></td>
+              <td><code>none</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </main><!-- role main -->
+  </div><!-- role document -->
+
+
+  </body>
+</html>

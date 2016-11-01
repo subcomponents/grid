@@ -1,4 +1,4 @@
-# hypergrid
+# hyperflexbox
 
 Visit the project website to read the introduction and documentation.
 

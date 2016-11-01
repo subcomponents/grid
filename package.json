@@ -1,7 +1,7 @@
 {
-  "name": "hyperflexbox",
-  "version": "1.0.0",
-  "description": "Flexbox grid",
+  "name": "hyper-grid",
+  "version": "0.0.0",
+  "description": "CSS grid with flexbox",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/heyallan/hyperflexbox.git"
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/heyallan/hyperflexbox/issues"
   },
-  "homepage": "https://github.com/heyallan/hyperflexbox#readme",
+  "homepage": "https://github.com/heyallan/hyperflexbox",
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "gulp": "^3.9.1",
