@@ -4,7 +4,7 @@
   "description": "CSS grid with flexbox",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyallan/hyperflexbox.git"
+    "url": "git+https://github.com/heyallan/hyper-grid.git"
   },
   "keywords": [
     "css",
@@ -20,9 +20,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heyallan/hyperflexbox/issues"
+    "url": "https://github.com/heyallan/hyper-grid/issues"
   },
-  "homepage": "https://github.com/heyallan/hyperflexbox",
+  "homepage": "https://github.com/heyallan/hyper-grid",
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "gulp": "^3.9.1",
