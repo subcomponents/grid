@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/heyallan/hyper-grid/issues"
   },
-  "homepage": "https://github.com/heyallan/hyper-grid",
+  "homepage": "https://heyallan.github.io/hyper-grid/",
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "gulp": "^3.9.1",

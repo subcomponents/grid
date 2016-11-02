@@ -19,12 +19,12 @@ gulp.task('styles', function() {
   return gulp.src('src/less/bundle.less')
     .pipe(less())
     .pipe(autoprefix({browsers:['last 2 versions']}))
-    .pipe(rename('styles.css'))
-    .pipe(header(banner,{package:pkgFile}))
+    .pipe(rename(pkgFile.name + '.css'))
+    .pipe(header(banner, {package: pkgFile}))
     .pipe(gulp.dest('dist/')) // <-- deliver expanded for dist
     .pipe(minify())
-    .pipe(rename('styles.min.css'))
-    .pipe(header(banner,{package:pkgFile}))
+    .pipe(rename(pkgFile.name + '.min.css'))
+    .pipe(header(banner, {package: pkgFile}))
     .pipe(gulp.dest('dist/')) // <-- deliver compressed for dist
     .pipe(gulp.dest('docs/')) // <-- deliver extra copy for docs
 })
@@ -33,7 +33,7 @@ gulp.task('docs', function() {
   return gulp.src('src/docs/pages/*.njk')
     .pipe(nunjucks({
       path: 'src/docs/partials/',
-      data: {package:pkgFile}
+      data: {package: pkgFile}
     }))
     .pipe(gulp.dest('docs/'));
 })
