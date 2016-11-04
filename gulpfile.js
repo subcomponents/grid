@@ -9,7 +9,6 @@ var nunjucks     = require('gulp-nunjucks-render');
 var pkgFile      = require('./package.json');
 var banner = ['/**',
   ' * <%= package.name %>',
-  ' * <%= package.description %>',
   ' * <%= package.homepage %>',
   ' * License <%= package.license %> Copyright (c) 2016-<%= new Date().getFullYear() %>',
   ' */',

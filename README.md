@@ -1,17 +1,21 @@
-# hyperflexbox
+# hyper-grid
 
-Visit the project website to read the introduction and documentation.
+> CSS grid with flexbox"
 
-## Issues
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Support](https://img.shields.io/badge/_Support-❤︎_Development-9b59b6.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MAURFPVLDCF64)
 
-😱 ¡Ay caramba! [Open issue](../../issues/), describe bug, suggest solution
+## Docs
 
-## Contributing
+Visit the project website to see demo/documentation
 
-- 😊 Be my guest: [Fork](https://guides.github.com/activities/forking/), clone, edit, push, send pull request
-- 💬 [Join gitter chat](https://gitter.im/heyallan/hyperflexbox)
-- ❤️ [Support active development](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MAURFPVLDCF64)
+## Contribute
 
-## License
+Be my guest:
+
+- 😱 Open issue, describe bug, suggest solution
+- 😊 Fork, clone, edit, push, send pull request (ask first)
+
+## MIT License
 
 The MIT License is a permissive license. It lets you do anything you want with the code as long as you provide attribution back to the author and don’t hold him/her liable. jQuery, .NET Core, and Rails use the MIT License.
