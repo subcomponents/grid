@@ -1,6 +1,6 @@
 {
   "name": "hyper-grid",
-  "version": "1.2.4",
+  "version": "1.3.0",
   "description": "CSS grid with flexbox",
   "repository": {
     "type": "git",
@@ -9,14 +9,16 @@
   "keywords": [
     "css",
     "flexbox",
-    "grid"
+    "grid",
+    "hyper",
+    "atomic"
   ],
   "author": {
-    "name": "Allan Moreno",
     "username": "heyallan",
-    "email": "hello@heyallan.com",
-    "url": "http://heyallan.com",
-    "twitter": "heyallanmoreno"
+    "twitter": {
+      "url": "https://twitter.com/heyallanmoreno",
+      "username": "heyallanmoreno"
+    }
   },
   "license": "MIT",
   "bugs": {
@@ -26,15 +28,23 @@
     "url": "https://github.com/heyallan/hyper-grid"
   },
   "homepage": "https://heyallan.github.io/hyper-grid/",
+  "repo": {
+    "url": "https://github.com/heyallan/hyper-grid"
+  },
+  "demo": {
+    "url": "https://heyallan.github.io/hyper-grid"
+  },
+  "keyword": "grid",
+  "scope": "@hypercss",
   "devDependencies": {
-    "autoprefixer": "^6.4.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-header": "^1.8.8",
-    "gulp-less": "^3.1.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-header": "^2.0.5",
+    "gulp-less": "^3.5.0",
     "gulp-minify-css": "^1.2.4",
-    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-nunjucks-render": "^2.2.2",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^2.6.4",
+    "yargs": "^11.0.0"
   }
 }

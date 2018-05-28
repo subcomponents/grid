@@ -1,79 +1,23 @@
-{% extends "base.njk" %}
+{% extends "template-default.njk" %}
 
 {% block content %}
 
-  <div id="top" role="document">
-
-    {% include "header.njk" %}
-
-    <main role="main">
-      <header>
-        <p><b>{{ package.description }}</b></p>
-        <div class="row margin-bottom-1">
-          <div class="col-xs">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-        </div><!-- /row -->
-        <div class="row margin-bottom-1">
-          <div class="col-xs-12 col-md-6">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-          <div class="col-xs-12 col-md-6">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-        </div><!-- /row -->
-        <div class="row margin-bottom-1">
-          <div class="col-xs-12 col-md-4">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-          <div class="col-xs-12 col-md-4">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-          <div class="col-xs-12 col-md-4">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-        </div><!-- /row -->
-        <div class="row margin-bottom-1">
-          <div class="col-xs-12 col-md-3">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-          <div class="col-xs-12 col-md-3">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-          <div class="col-xs-12 col-md-3">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-          <div class="col-xs-12 col-md-3">
-            <div class="padding-1 border-1 bg-primary"></div>
-          </div><!-- /col -->
-        </div><!-- /row -->
-      </header>
-      <article>
-        <section>
-          <h2>Installation</h2>
-<pre>Download: https://unpkg.com/{{package.name}}/dist/styles.min.css</pre>
-<pre><code class="language-markup">&lt;!-- CDN Development (always latest) --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/{{package.name}}/dist/styles.min.css&quot;/&gt;
-</code></pre>
-<pre><code class="language-markup">&lt;!-- CDN Production (specific release) --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/{{package.name}}@{{package.version}}/dist/styles.min.css&quot;/&gt;
-</code></pre>
-<pre><code class="language-bash"># npm package
-$ npm install --save-dev {{ package.name }}
-</code></pre>
-<pre><code class="language-css">/* CSS import */
-@import url(&quot;https://unpkg.com/{{package.name}}@{{package.version}}/dist/styles.min.css&quot;);
-</code></pre>
-        </section>
-      </article>
-      <footer>
-        <hr>
-        <p>
-          <a href="https://twitter.com/intent/tweet/?&text={{ package.description | urlencode }}%20»&url={{ package.homepage }}&via={{ package.author.twitter }}"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000" alt="Tweet this" /></a>
-          <a href="{{ package.homepage }}"><img src="https://img.shields.io/github/stars/{{ package.author.username }}/{{ package.name }}.svg?style=social&label=Stars&maxAge=2592000" alt="Fork me on GitHub" /></a>
-        </p>
-      </footer>
-    </main><!-- role main -->
-  </div><!-- role document -->
+  <main role="main">
+    <section>
+      <p><b>{{ package.description }}</b></p>
+      <figure><img src="{{ baseURL }}/screenshot.png?t={{ timestamp }}" alt="screen shot"></figure>
+    </section>
+    <section>
+      <h2>Install</h2>
+<p>CDN Development (redirect to latest):</p>
+<pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/{{ package.name }}/dist/{{ package.keyword }}.min.css"/&gt;</code></pre>
+<p>CDN Production (specific release):</p>
+<pre><code>&lt;link rel="stylesheet" href="https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.keyword }}.min.css"/&gt;</code></pre>
+<p>NPM package:</p>
+<pre><code>$ npm install --save-dev {{ package.name }}</code></pre>
+<p>CSS import:</p>
+<pre><code>@import url(&quot;https://unpkg.com/{{ package.name }}@{{ package.version }}/dist/{{ package.keyword }}.min.css&quot;);</code></pre>
+    </section>
+  </main><!-- role main -->
 
 {% endblock %}
