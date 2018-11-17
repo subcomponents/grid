@@ -1,17 +1,17 @@
 {
   "name": "hyper-grid-css",
-  "version": "1.3.3",
-  "description": "CSS grid with flexbox",
+  "version": "1.4.0",
+  "description": "Grid layout with flexbox",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/heyallan/hyper-grid-css.git"
   },
+  "abstract": "Utility library to build grid layout with flexbox",
   "keywords": [
     "css",
     "flexbox",
     "grid",
-    "hyper",
-    "atomic"
+    "hyper"
   ],
   "author": {
     "username": "heyallan",
@@ -24,25 +24,21 @@
   "bugs": {
     "url": "https://github.com/heyallan/hyper-grid-css/issues"
   },
+  "homepage": "https://heyallan.github.io/hyper-grid-css",
   "main": "dist/grid.min.css",
   "repo": {
     "url": "https://github.com/heyallan/hyper-grid-css"
   },
-  "homepage": "https://heyallan.github.io/hyper-grid-css",
-  "demo": {
-    "url": "https://heyallan.github.io/hyper-grid-css"
-  },
   "keyword": "grid",
-  "scope": "@hypercss",
+  "scope": "@metacss",
   "devDependencies": {
+    "browser-sync": "^2.24.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-header": "^2.0.5",
     "gulp-less": "^3.5.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-nunjucks-render": "^2.2.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "yargs": "^11.0.0"
+    "gulp-rename": "^1.2.2"
   }
 }
