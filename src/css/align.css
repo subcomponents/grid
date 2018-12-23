@@ -11,7 +11,7 @@
   align-items: flex-end;
 }
 
-@media only screen and (min-width: @breakpoint-sm) {
+@media only screen and (min-width: 544px) {
   .align-sm-top {
     align-items: flex-start;
   }
@@ -23,7 +23,7 @@
   }
 }
 
-@media only screen and (min-width: @breakpoint-md) {
+@media only screen and (min-width: 768px) {
   .align-md-top {
     align-items: flex-start;
   }
@@ -35,7 +35,7 @@
   }
 }
 
-@media only screen and (min-width: @breakpoint-lg) {
+@media only screen and (min-width: 1024px) {
   .align-lg-top {
     align-items: flex-start;
   }

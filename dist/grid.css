@@ -1,5 +1,10 @@
-/** (C) License MIT | https://github.com/heyallan/hyper-grid-css */
+/** https://github.com/heyallan/hyper-grid-css */
 
+/* breakpoint-sm: 544px; */
+/* breakpoint-md: 768px; */
+/* breakpoint-lg: 1024px; */
+/* breakpoint-xl: 1216px; */
+:root {}
 .container,
 .container-fluid {
   margin-right: auto;
@@ -32,6 +37,7 @@
   min-width: 0;
 }
 .column {
+  /* generic column */
   padding-left: 1rem;
   padding-right: 1rem;
   flex-grow: 1;
@@ -504,10 +510,10 @@
   }
 }
 @media only screen and (min-width: 1024px) {
-  .order-lg-first {
+  .order-lg-first{
     order: -1;
   }
-  .order-lg-last {
+  .order-lg-last{
     order: 1;
   }
 }

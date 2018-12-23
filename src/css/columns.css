@@ -9,7 +9,7 @@
 }
 
 .column {
-  // generic column
+  /* generic column */
   padding-left: 1rem;
   padding-right: 1rem;
   flex-grow: 1;
@@ -22,7 +22,7 @@
 .col-xs-auto,
 .col-sm-auto,
 .col-md-auto,
-.col-lg-auto, {
+.col-lg-auto {
   flex-grow: 1;
   flex-basis: 0;
 }
@@ -89,7 +89,7 @@
   flex-basis: 100%;
 }
 
-@media only screen and (min-width: @breakpoint-sm) {
+@media only screen and (min-width: 544px) {
   .col-sm-1 {
     flex-basis: 8.333%;
   }
@@ -128,7 +128,7 @@
   }
 }
 
-@media only screen and (min-width: @breakpoint-md) {
+@media only screen and (min-width: 768px) {
   .col-md-1 {
     flex-basis: 8.333%;
   }
@@ -167,7 +167,7 @@
   }
 }
 
-@media only screen and (min-width: @breakpoint-lg) {
+@media only screen and (min-width: 1024px) {
   .col-lg-1 {
     flex-basis: 8.333%;
   }

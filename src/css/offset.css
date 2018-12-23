@@ -32,7 +32,7 @@
   margin-left: 91.667%;
 }
 
-@media only screen and (min-width: @breakpoint-sm) {
+@media only screen and (min-width: 544px) {
   .col-sm-offset-1 {
     margin-left: 8.333%;
   }
@@ -68,7 +68,7 @@
   }
 }
 
-@media only screen and (min-width: @breakpoint-md) {
+@media only screen and (min-width: 768px) {
   .col-md-offset-1 {
     margin-left: 8.333%;
   }
@@ -103,7 +103,7 @@
     margin-left: 91.667%;
   }
 }
-@media only screen and (min-width: @breakpoint-lg) {
+@media only screen and (min-width: 1024px) {
   .col-lg-offset-1 {
     margin-left: 8.333%;
   }
