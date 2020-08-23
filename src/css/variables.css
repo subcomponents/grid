@@ -1,6 +1,10 @@
-/* breakpoint-sm: 544px; */
-/* breakpoint-md: 768px; */
-/* breakpoint-lg: 1024px; */
-/* breakpoint-xl: 1216px; */
+:root {
+  --container-width: 1200px;
+}
 
-:root {}
+@custom-media --breakpoint-sm-only (max-width: 30em);
+@custom-media --breakpoint-md-only (max-width: 42em);
+
+@custom-media --breakpoint-sm (min-width: 30em);
+@custom-media --breakpoint-md (min-width: 42em);
+@custom-media --breakpoint-lg (min-width: 57em);

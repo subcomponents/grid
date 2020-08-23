@@ -3,7 +3,7 @@
 ![License][LicenseBadgeURL]
 [![Donate][DonateBadgeURL]][DonateURL]
 
-> Grid layout with flexbox
+> CSS layout
 
 ## Documentation
 

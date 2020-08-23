@@ -1,0 +1,66 @@
+/* flex gap */
+
+.flex {
+  --gap: 1em;
+}
+
+.flex {
+  /* gap offset */
+  /* use offset technique until native `gap` property becomes available: https://developer.mozilla.org/en-US/docs/Web/CSS/gap */
+  margin-bottom: calc(var(--gap) * -1);
+  margin-left: calc(var(--gap) * -1);
+}
+.flex > * {
+  /* gap */
+  padding-bottom: var(--gap);
+  padding-left: var(--gap);
+}
+
+/* grid gap */
+
+.grid {
+  --gap: 1em;
+}
+
+.grid {
+  grid-gap: var(--gap);
+}
+
+/* modifiers */
+/* for flex and grid */
+
+.gap-0, .gap-0-xs { --gap: 0em; }
+.gap-1, .gap-1-xs { --gap: 1em; }
+.gap-1\.5, .gap-1\.5-xs { --gap: 1.5em; }
+.gap-2, .gap-2-xs { --gap: 2em; }
+.gap-3, .gap-3-xs { --gap: 3em; }
+.gap-4, .gap-4-xs { --gap: 4em; }
+.gap-5, .gap-5-xs { --gap: 5em; }
+
+@media (--breakpoint-sm) {
+  .gap-0-sm { --gap: 0em; }
+  .gap-1-sm { --gap: 1em; }
+  .gap-1\.5-sm { --gap: 1.5em; }
+  .gap-2-sm { --gap: 2em; }
+  .gap-3-sm { --gap: 3em; }
+  .gap-4-sm { --gap: 4em; }
+  .gap-5-sm { --gap: 5em; }
+}
+@media (--breakpoint-md) {
+  .gap-0-md { --gap: 0em; }
+  .gap-1-md { --gap: 1em; }
+  .gap-1\.5-md { --gap: 1.5em; }
+  .gap-2-md { --gap: 2em; }
+  .gap-3-md { --gap: 3em; }
+  .gap-4-md { --gap: 4em; }
+  .gap-5-md { --gap: 5em; }
+}
+@media (--breakpoint-lg) {
+  .gap-0-lg { --gap: 0em; }
+  .gap-1-lg { --gap: 1em; }
+  .gap-1\.5-lg { --gap: 1.5em; }
+  .gap-2-lg { --gap: 2em; }
+  .gap-3-lg { --gap: 3em; }
+  .gap-4-lg { --gap: 4em; }
+  .gap-5-lg { --gap: 5em; }
+}
