@@ -1,6 +1,6 @@
 {
   "name": "hyper-grid-css",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "CSS layout library",
   "repository": {
     "type": "git",
@@ -30,7 +30,6 @@
     "url": "https://github.com/heyallan/hyper-grid-css"
   },
   "keyword": "grid",
-  "scope": "@metacss",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
