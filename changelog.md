@@ -1,5 +1,9 @@
 # changelog
 
+## 3.1.3
+
+- switch from `gulp-minify-css` to `gulp-clean-css`
+
 ## 3.1.0
 
 - set default gap to 0
