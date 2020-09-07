@@ -5,7 +5,7 @@
   <main>
 
     <section class="margin-bottom-3">
-      <h2>Flexbox layout (12 fractions)</h2>
+      <h2 id="flex">Flexbox layout (12 fractions)</h2>
       <div class="flex gap-1">
         <div class="width-12 width-6-md">
           <div class="bg-primary padding-1 outline"><code>6/12</code></div>
@@ -44,22 +44,34 @@
     </section>
 
     <section class="margin-bottom-3">
-      <h2>Auto width</h2>
-      <p><code>.flex</code></p>
+      <h2 id="flexible-widths">Flexible widths</h2>
+      <p><code>.width-auto</code> takes as much space as possible</p>
       <div class="flex-wrapper bg-primary padding-y-1 outline">
-        <div class="flex">
+        <div class="flex gap-1">
           <div class="width-auto">
             <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
           </div><!-- /.col -->
-          <div class="width-12 width-4-md">
+          <div class="width-4">
             <div class="bg-primary padding-1 outline"><code>.width-4</code></div>
+          </div><!-- /.col -->
+        </div><!-- /.flex -->
+      </div>
+      <br>
+      <p><code>.width-min</code> takes as little space as possible</p>
+      <div class="flex-wrapper bg-primary padding-y-1 outline">
+        <div class="flex gap-1">
+          <div class="width-min">
+            <div class="bg-primary padding-1 outline"><code>.width-min</code></div>
+          </div><!-- /.col -->
+          <div class="width-auto">
+            <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
           </div><!-- /.col -->
         </div><!-- /.flex -->
       </div>
     </section>
 
     <section class="margin-bottom-3">
-      <h2>Offset (1-11)</h2>
+      <h2 id="offset">Offset (1-11)</h2>
       <p><code>.flex</code></p>
       <div class="flex-wrapper bg-primary padding-y-1 outline">
         <div class="flex">
@@ -71,10 +83,10 @@
     </section>
 
     <section class="margin-bottom-3">
-      <h2>Justify (main axis)</h2>
+      <h2 id="justify">Justify (main axis)</h2>
       <p><code>.flex.justify-start</code></p>
       <div class="flex-wrapper bg-primary padding-y-1 outline">
-        <div class="flex justify-start-xs">
+        <div class="flex gap-1 justify-start-xs">
           <div class="width-12-xs width-3-md">
             <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
           </div><!-- /.col -->
@@ -89,7 +101,7 @@
       <p><!--spacer--></p>
       <p><code>.flex.justify-center</code></p>
       <div class="flex-wrapper padding-y-1 bg-primary outline">
-        <div class="flex justify-center-xs">
+        <div class="flex gap-1 justify-center-xs">
           <div class="width-12-xs width-3-md">
             <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
           </div><!-- /.col -->
@@ -104,7 +116,7 @@
       <p><!--spacer--></p>
       <p><code>.flex.justify-end</code></p>
       <div class="flex-wrapper padding-y-1 bg-primary outline">
-        <div class="flex justify-end-xs">
+        <div class="flex gap-1 justify-end-xs">
           <div class="width-12-xs width-3-md">
             <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
           </div><!-- /.col -->
@@ -164,8 +176,8 @@
     </section>
 
     <section class="margin-bottom-3">
-      <h2>Align (cross axis)</h2>
-      <div class="flex">
+      <h2 id="align">Align (cross axis)</h2>
+      <div class="flex gap-1">
         <div class="width-12 width-4-md">
           <p><code>.flex.align-start</code></p>
           <div class="flex-wrapper padding-y-1 bg-primary outline">
@@ -200,10 +212,10 @@
     </section>
 
     <section class="margin-bottom-3">
-      <h2>Order</h2>
+      <h2 id="order">Order</h2>
       <p><code>.flex</code></p>
       <div class="flex-wrapper bg-primary padding-y-1 outline">
-        <div class="flex">
+        <div class="flex gap-1">
           <div class="width-4-xs order-last-xs">
             <div class="bg-primary padding-1 outline"><code>.order-last-xs (1)</code></div>
           </div><!-- /.col -->
@@ -218,7 +230,7 @@
       <p><!--spacer--></p>
       <p><code>.flex</code></p>
       <div class="flex-wrapper bg-primary padding-y-1 outline">
-        <div class="flex">
+        <div class="flex gap-1">
           <div class="width-4-xs">
             <div class=" bg-primary padding-1 outline"><code>1</code></div>
           </div><!-- /.col -->
@@ -233,10 +245,10 @@
     </section>
 
     <section class="margin-bottom-3">
-      <h2>Direction</h2>
+      <h2 id="direction">Direction</h2>
       <p><code>.flex.row</code> (default)</p>
       <div class="flex-wrapper bg-primary padding-y-1 outline">
-        <div class="flex row">
+        <div class="flex gap-1 row">
           <div class="width-4-xs">
             <div class="bg-primary padding-1 outline"><code>1</code></div>
           </div><!-- /.col -->
@@ -251,7 +263,7 @@
       <p><!--spacer--></p>
       <p><code>.flex.row.reverse</code></p>
       <div class="flex-wrapper bg-primary padding-y-1 outline">
-        <div class="flex row reverse">
+        <div class="flex gap-1 row reverse">
           <div class="width-4-xs">
             <div class="bg-primary padding-1 outline"><code>1</code></div>
           </div><!-- /.col -->
@@ -264,11 +276,11 @@
         </div><!-- /.flex -->
       </div>
       <p><!--spacer--></p>
-      <div class="flex">
+      <div class="flex gap-1">
         <div class="width-12 width-6-md">
           <p><code>.flex.column</code></p>
           <div class="flex-wrapper bg-primary padding-y-1 outline">
-            <div class="flex column">
+            <div class="flex gap-1 column">
               <div class="width-4-xs">
                 <div class="bg-primary padding-1 outline"><code>1</code></div>
               </div><!-- /.col -->
@@ -284,7 +296,7 @@
         <div class="width-12 width-6-md">
           <p><code>.flex.column.reverse</code></p>
           <div class="flex-wrapper bg-primary padding-y-1 outline">
-            <div class="flex column reverse">
+            <div class="flex gap-1 column reverse">
               <div class="width-4-xs">
                 <div class="bg-primary padding-1 outline"><code>1</code></div>
               </div><!-- /.col -->
@@ -301,8 +313,8 @@
     </section>
 
     <section class="margin-bottom-3">
-      <h2>Gap</h2>
-      <p><code>.flex.gap-{0-5}</code></p>
+      <h2 id="gap">Gap</h2>
+      <p><code>.flex.gap-<em>n</em> (0-5)</code></p>
       <div class="flex-wrapper margin-bottom-2">
         <div class="flex gap-3">
           <div class="width-12-xs width-4-md">
@@ -316,7 +328,7 @@
           </div>
         </div>
       </div>
-      <p><code>.flex[style="--gap: &lt;length&gt;"]</code></p>
+      <p><code>.flex[style="--gap: <em>&lt;length&gt;</em>"]</code></p>
       <div class="margin-bottom-1">
         <div class="flex" style="--gap: 3em;">
           <div class="width-12-xs width-4-md">
@@ -333,7 +345,7 @@
     </section>
 
     <section class="margin-bottom-3">
-      <h2>Breakpoints</h2>
+      <h2 id="breakpoints">Breakpoints</h2>
       <table>
         <thead>
           <tr>
@@ -367,7 +379,7 @@
     </section>
 
     <section class="margin-bottom-3">
-      <h2>Containers</h2>
+      <h2 id="containers">Containers</h2>
       <table>
         <thead>
           <tr>

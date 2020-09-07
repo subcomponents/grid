@@ -1,4 +1,4 @@
-/** 3.0.0 https://github.com/heyallan/hyper-grid-css */
+/** 3.1.0 https://github.com/heyallan/hyper-grid-css */
 :root {
   --container-width: 1200px;
 }
@@ -17,142 +17,160 @@
   max-width: var(--container-width);
 }
 
-/* flex-basis: auto; distributes free space (according to grow factor) */
+/*
+* flex:
+*   auto    = 1 1 auto (flex generic)
+*   initial = 0 1 auto (column generic) (should not grow)
+*   none    = 0 0 auto (column-min)
+*   n       = n 1 0%   (column-auto)
+*/
 
-/* flex-basis: 0; distributes self width (according to grow factor) */
-
-/* some elements dont have enough intrincic min-width thus require manual min-width */
-
-/* flex-shrink 0 requires max-width to prevent overflow */
+/* optional wrapper */
 
 .flex-wrapper {
-  overflow: hidden; /* optional */
+  overflow: hidden;
 }
 
 .flex {
   --grow: 1;
-  --basis: 0;
+  --shrink: 1;
+  --basis: auto;
   --min-width: 0;
-  display: flex;
-  flex-flow: row wrap;
+  --direction: row;
+  --wrap: wrap;
 }
+
+.flex {
+  display: flex;
+  flex-flow: var(--direction) var(--wrap);
+}
+
+/* generic flex item */
+
+/* ----- ----- ----- ----- ----- */
 
 .flex > * {
-  /* default column (fluid width) */
-  flex: var(--grow) 1 var(--min-width); /* 1 1 0 */
-  /* adjustments */
-  min-width: var(--min-width); /* allow basis 0 to shrink */
-  max-width: 100%; /* prevent basis 100% overflow */
+  /* generic flex item */
+  flex: var(--grow) var(--shrink) var(--basis); /* 1 1 auto */
+
+  /* allow basis 0 to shrink */
+  min-width: var(--min-width);
+
+  /* prevent basis 100% overflow */
+  max-width: 100%;
 }
 
-.flex > [class*="width-content"] {
-  --basis: auto;
+[class*='width-'] {
+  /* layout items should not grow */
+  --grow: 0; /* 0 1 auto */
 }
 
-/* widths */
+/* layout flex items */
 
-.width-1,    .width-1-xs    { flex: 0 1 8.333%; }
+/* ----- ----- ----- ----- ----- */
 
-.width-2,    .width-2-xs    { flex: 0 1 16.667%; }
+.width-1,    .width-1-xs    { --basis: 8.333%; }
 
-.width-3,    .width-3-xs    { flex: 0 1 25%; }
+.width-2,    .width-2-xs    { --basis: 16.667%; }
 
-.width-4,    .width-4-xs    { flex: 0 1 33.333%; }
+.width-3,    .width-3-xs    { --basis: 25%; }
 
-.width-5,    .width-5-xs    { flex: 0 1 41.667%; }
+.width-4,    .width-4-xs    { --basis: 33.333%; }
 
-.width-6,    .width-6-xs    { flex: 0 1 50%; }
+.width-5,    .width-5-xs    { --basis: 41.667%; }
 
-.width-7,    .width-7-xs    { flex: 0 1 58.333%; }
+.width-6,    .width-6-xs    { --basis: 50%; }
 
-.width-8,    .width-8-xs    { flex: 0 1 66.667%; }
+.width-7,    .width-7-xs    { --basis: 58.333%; }
 
-.width-9,    .width-9-xs    { flex: 0 1 75%; }
+.width-8,    .width-8-xs    { --basis: 66.667%; }
 
-.width-10,   .width-10-xs   { flex: 0 1 83.333%; }
+.width-9,    .width-9-xs    { --basis: 75%; }
 
-.width-11,   .width-11-xs   { flex: 0 1 91.667%; }
+.width-10,   .width-10-xs   { --basis: 83.333%; }
 
-.width-12,   .width-12-xs   { flex: 0 1 100%; }
+.width-11,   .width-11-xs   { --basis: 91.667%; }
 
-.width-auto, .width-auto-xs { flex: var(--grow) 1 var(--basis); }
+.width-12,   .width-12-xs   { --basis: 100%; }
+
+.width-min,  .width-min-xs  { --shrink: 0; }
+
+/* 0 0 auto */
+
+.width-auto, .width-auto-xs { --grow: 1; --basis: 0; }
 
 /* 1 1 0 */
 
-.width-content, .width-content-xs { flex: var(--grow) 1 var(--basis); }
-
-/* 1 1 auto */
-
 @media (min-width: 30em) {
-  .width-1-sm { flex: 0 1 8.333%; }
-  .width-2-sm { flex: 0 1 16.667%; }
-  .width-3-sm { flex: 0 1 25%; }
-  .width-4-sm { flex: 0 1 33.333%; }
-  .width-5-sm { flex: 0 1 41.667%; }
-  .width-6-sm { flex: 0 1 50%; }
-  .width-7-sm { flex: 0 1 58.333%; }
-  .width-8-sm { flex: 0 1 66.667%; }
-  .width-9-sm { flex: 0 1 75%; }
-  .width-10-sm { flex: 0 1 83.333%; }
-  .width-11-sm { flex: 0 1 91.667%; }
-  .width-12-sm { flex: 0 1 100%; }
-  .width-auto-sm { flex: var(--grow) 1 var(--basis); }
-  .width-content-sm { flex: var(--grow) 1 var(--basis); }
+  .width-1-sm    { --basis: 8.333%; }
+  .width-2-sm    { --basis: 16.667%; }
+  .width-3-sm    { --basis: 25%; }
+  .width-4-sm    { --basis: 33.333%; }
+  .width-5-sm    { --basis: 41.667%; }
+  .width-6-sm    { --basis: 50%; }
+  .width-7-sm    { --basis: 58.333%; }
+  .width-8-sm    { --basis: 66.667%; }
+  .width-9-sm    { --basis: 75%; }
+  .width-10-sm   { --basis: 83.333%; }
+  .width-11-sm   { --basis: 91.667%; }
+  .width-12-sm   { --basis: 100%; }
+  .width-min-sm  { --shrink: 0; }
+  .width-auto-sm { --grow: 1; --basis: 0; }
 }
 
 @media (min-width: 42em) {
-  .width-1-md { flex: 0 1 8.333%; }
-  .width-2-md { flex: 0 1 16.667%; }
-  .width-3-md { flex: 0 1 25%; }
-  .width-4-md { flex: 0 1 33.333%; }
-  .width-5-md { flex: 0 1 41.667%; }
-  .width-6-md { flex: 0 1 50%; }
-  .width-7-md { flex: 0 1 58.333%; }
-  .width-8-md { flex: 0 1 66.667%; }
-  .width-9-md { flex: 0 1 75%; }
-  .width-10-md { flex: 0 1 83.333%; }
-  .width-11-md { flex: 0 1 91.667%; }
-  .width-12-md { flex: 0 1 100%; }
-  .width-auto-md { flex: var(--grow) 1 var(--basis); }
-  .width-content-md { flex: var(--grow) 1 var(--basis); }
+  .width-1-md    { --basis: 8.333%; }
+  .width-2-md    { --basis: 16.667%; }
+  .width-3-md    { --basis: 25%; }
+  .width-4-md    { --basis: 33.333%; }
+  .width-5-md    { --basis: 41.667%; }
+  .width-6-md    { --basis: 50%; }
+  .width-7-md    { --basis: 58.333%; }
+  .width-8-md    { --basis: 66.667%; }
+  .width-9-md    { --basis: 75%; }
+  .width-10-md   { --basis: 83.333%; }
+  .width-11-md   { --basis: 91.667%; }
+  .width-12-md   { --basis: 100%; }
+  .width-min-md  { --shrink: 0; }
+  .width-auto-md { --grow: 1; --basis: 0; }
 }
 
 @media (min-width: 57em) {
-  .width-1-lg { flex: 0 1 8.333%; }
-  .width-2-lg { flex: 0 1 16.667%; }
-  .width-3-lg { flex: 0 1 25%; }
-  .width-4-lg { flex: 0 1 33.333%; }
-  .width-5-lg { flex: 0 1 41.667%; }
-  .width-6-lg { flex: 0 1 50%; }
-  .width-7-lg { flex: 0 1 58.333%; }
-  .width-8-lg { flex: 0 1 66.667%; }
-  .width-9-lg { flex: 0 1 75%; }
-  .width-10-lg { flex: 0 1 83.333%; }
-  .width-11-lg { flex: 0 1 91.667%; }
-  .width-12-lg { flex: 0 1 100%; }
-  .width-auto-lg { flex: var(--grow) 1 var(--basis); }
-  .width-content-lg { flex: var(--grow) 1 var(--basis); }
+  .width-1-lg    { --basis: 8.333%; }
+  .width-2-lg    { --basis: 16.667%; }
+  .width-3-lg    { --basis: 25%; }
+  .width-4-lg    { --basis: 33.333%; }
+  .width-5-lg    { --basis: 41.667%; }
+  .width-6-lg    { --basis: 50%; }
+  .width-7-lg    { --basis: 58.333%; }
+  .width-8-lg    { --basis: 66.667%; }
+  .width-9-lg    { --basis: 75%; }
+  .width-10-lg   { --basis: 83.333%; }
+  .width-11-lg   { --basis: 91.667%; }
+  .width-12-lg   { --basis: 100%; }
+  .width-min-lg  { --shrink: 0; }
+  .width-auto-lg { --grow: 1; --basis: 0; }
 }
 
-/* growth proportion */
+/* grow */
 
-.grow-0 { flex-grow: 0; }
+.grow-0 { --grow: 0; }
 
-.grow-1 { flex-grow: 1; }
+.grow-1 { --grow: 1; }
 
-.grow-2 { flex-grow: 2; }
+.grow-2 { --grow: 2; }
 
-.grow-3 { flex-grow: 3; }
+.grow-3 { --grow: 3; }
 
-.grow-4 { flex-grow: 4; }
+.grow-4 { --grow: 4; }
 
-.grow-5 { flex-grow: 5; }
+.grow-5 { --grow: 5; }
 
 /* shrink */
 
-.shrink-0 { flex-shrink: 0; }
+.shrink-0 { --shrink: 0; }
 
-.shrink-1 { flex-shrink: 1; }
+.shrink-1 { --shrink: 1; }
 
 /* order */
 
@@ -177,27 +195,27 @@
 
 /* direction */
 
-.row            { flex-direction: row; }
+.row            { --direction: row; }
 
-.column         { flex-direction: column; }
+.reverse        { --direction: row-reverse; }
 
-.reverse        { flex-direction: row-reverse; }
+.column         { --direction: column; }
 
-.column.reverse { flex-direction: column-reverse; }
+.column.reverse { --direction: column-reverse; }
 
 @media (min-width: 30em) {
-  .row-sm    { flex-direction: row; }
-  .column-sm { flex-direction: column; }
+  .row-sm    { --direction: row; }
+  .column-sm { --direction: column; }
 }
 
 @media (min-width: 42em) {
-  .row-md    { flex-direction: row; }
-  .column-md { flex-direction: column; }
+  .row-md    { --direction: row; }
+  .column-md { --direction: column; }
 }
 
 @media (min-width: 57em) {
-  .row-lg    { flex-direction: row; }
-  .column-lg { flex-direction: column; }
+  .row-lg    { --direction: row; }
+  .column-lg { --direction: column; }
 }
 
 /* offset */
@@ -406,40 +424,58 @@
   .height-12-lg { grid-row-end: span 12; }
 }
 
-/* flex gap */
+/* flex */
 
-.flex {
-  --gap: 1em;
-}
+/* ----- ----- ----- ----- ----- */
 
-.flex {
-  /* gap offset */
-  /* use offset technique until native `gap` property becomes available: https://developer.mozilla.org/en-US/docs/Web/CSS/gap */
-  margin-bottom: calc(var(--gap) * -1);
-  margin-left: calc(var(--gap) * -1);
-}
+/*
+* flexbox gap is simulated
+* use simulation until `gap` property becomes available
+* https://developer.mozilla.org/en-US/docs/Web/CSS/gap
+* https://caniuse.com/#feat=flexbox-gap
+*/
+
+/* flex gap simulation */
 
 .flex > * {
-  /* gap */
   padding-bottom: var(--gap);
   padding-left: var(--gap);
 }
 
-/* grid gap */
+/* cancel offset generated by flex gap simulation */
 
-.grid {
-  --gap: 1em;
+/* use `.flex-wrapper` to contain gap overflow if necessary */
+
+.flex {
+  margin-bottom: calc(var(--gap) * -1);
+  margin-left: calc(var(--gap) * -1);
 }
+
+/* default gap */
+
+.flex {
+  --gap: 0;
+}
+
+/* grid */
+
+/* ----- ----- ----- ----- ----- */
+
+/* grid gap */
 
 .grid {
   grid-gap: var(--gap);
 }
 
-/* modifiers */
+/* default gap */
 
-/* for flex and grid */
+.grid {
+  --gap: 0;
+}
 
-.gap-0, .gap-0-xs { --gap: 0em; }
+/* modifiers, applies to flex and grid */
+
+.gap-0, .gap-0-xs { --gap: 0; }
 
 .gap-1, .gap-1-xs { --gap: 1em; }
 
@@ -454,7 +490,7 @@
 .gap-5, .gap-5-xs { --gap: 5em; }
 
 @media (min-width: 30em) {
-  .gap-0-sm { --gap: 0em; }
+  .gap-0-sm { --gap: 0; }
   .gap-1-sm { --gap: 1em; }
   .gap-1\.5-sm { --gap: 1.5em; }
   .gap-2-sm { --gap: 2em; }
@@ -464,7 +500,7 @@
 }
 
 @media (min-width: 42em) {
-  .gap-0-md { --gap: 0em; }
+  .gap-0-md { --gap: 0; }
   .gap-1-md { --gap: 1em; }
   .gap-1\.5-md { --gap: 1.5em; }
   .gap-2-md { --gap: 2em; }
@@ -474,7 +510,7 @@
 }
 
 @media (min-width: 57em) {
-  .gap-0-lg { --gap: 0em; }
+  .gap-0-lg { --gap: 0; }
   .gap-1-lg { --gap: 1em; }
   .gap-1\.5-lg { --gap: 1.5em; }
   .gap-2-lg { --gap: 2em; }

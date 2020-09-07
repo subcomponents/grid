@@ -10,10 +10,11 @@ var pkgJson      = require('./package.json');
 var browserSync  = require('browser-sync').create();
 var banner       = ['/** <%= package.version %> <%= package.repo.url %> */\n'];
 
-// presetEnv options
 var presetEnvOptions = {
-  stage: 1, // which CSS features to polyfill, for custom media queries
-  // preserve: true // preserve styles as authored, for logical properties
+  // preserve: true, // preserve styles as authored
+  features: {
+    'custom-media-queries': true
+  }
 }
 
 function css() {

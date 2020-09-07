@@ -3,7 +3,7 @@
 ![License][LicenseBadgeURL]
 [![Donate][DonateBadgeURL]][DonateURL]
 
-> CSS layout
+> CSS layout library
 
 ## Documentation
 

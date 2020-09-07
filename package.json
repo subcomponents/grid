@@ -1,7 +1,7 @@
 {
   "name": "hyper-grid-css",
-  "version": "3.0.0",
-  "description": "CSS layout",
+  "version": "3.1.0",
+  "description": "CSS layout library",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/heyallan/hyper-grid-css.git"

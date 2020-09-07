@@ -1,5 +1,15 @@
 # changelog
 
+## 3.1.0
+
+- set default gap to 0
+- use css variables for flex items variations
+- improve gap rules
+- remove units for zero values
+- add `with-auto`, `width-min` classes
+- add `with-auto`, `width-min` to docs
+- remove `width-content` in favor of `width-auto`, `width-min`
+
 ## 3.0.0
 
 - update dependencies
