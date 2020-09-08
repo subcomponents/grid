@@ -60,7 +60,5 @@ function watcher() {
   watch('./src/readme/**/*', readme);
 }
 
-exports.css = css;
-exports.docs = docs;
-exports.readme = readme;
+exports.build = parallel(css, docs, readme);
 exports.default = parallel(css, docs, readme, server, watcher);
