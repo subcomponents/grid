@@ -1,4 +1,5 @@
-.grid {
+.grid,
+.display-grid {
   --min-width: 0;
   display: grid;
   grid-template-columns: repeat(12, minmax(var(--min-width), 1fr));

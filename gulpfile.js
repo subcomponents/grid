@@ -11,7 +11,7 @@ var browserSync  = require('browser-sync').create();
 var banner       = ['/** <%= package.version %> <%= package.repo.url %> */\n'];
 
 var presetEnvOptions = {
-  // preserve: true, // preserve styles as authored
+  // preserve: true,
   features: {
     'custom-media-queries': true
   }

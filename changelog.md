@@ -1,5 +1,13 @@
 # changelog
 
+## 3.2.0
+
+- add `.display-flex` (alias `.flex`)
+- add `.display-grid` (alias `.grid`)
+- add `self-align-*` classes
+- switch from `gulp-minify-css` to `gulp-clean-css`
+- update screenshot
+
 ## 3.1.3
 
 - switch from `gulp-minify-css` to `gulp-clean-css`

@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="properties.min.css"/>
   <link rel="stylesheet" href="./grid.min.css"/>
   <style>
-    .bg-primary { background-color: rgba(2, 117, 217, 0.2); }
-    .border-1 { border: 1px solid rgba(2, 117, 217, 0.4); }
-    .outline { outline: 1px solid rgba(2, 117, 217, 0.4); outline-offset: -1px; }
-    .outline-dashed { outline: 1px dashed rgba(2, 117, 217, 0.4); outline-offset: -1px; }
-    .flex code, .grid code { background-color: transparent; }
+    .bg-primary { background-color: rgba(2, 117, 217, 0.2) }
+    .border-1 { border: 1px solid rgba(2, 117, 217, 0.4) }
+    .outline { outline: 1px solid rgba(2, 117, 217, 0.4); outline-offset: -1px }
+    .outline-dashed { outline: 1px dashed rgba(2, 117, 217, 0.4); outline-offset: -1px }
+    .display-flex code, .display-grid code { background-color: transparent }
   </style>
 </head>
   <body class="">
     <header>
-  <h1>@hyper-grid-css <span class="color-primary">v3.1.7</span></h1>
+  <h1>@hyper-grid-css <span class="color-primary">v3.2.0</span></h1>
   <nav>
   <a href="./">Home</a>
   ·
@@ -38,7 +38,7 @@
 
   <section class="margin-bottom-3">
     <h2 id="grid">Grid layout (12 fractions)</h2>
-    <div class="grid gap-1">
+    <div class="display-grid gap-1">
       <div class="width-12 width-6-md">
         <div class="bg-primary padding-1 outline"><code>6/12</code></div>
       </div>
@@ -68,7 +68,7 @@
       </div>
     </div>
     <p><!--spacer--></p>
-<pre><code>&lt;div class="grid gap-1"&gt;
+<pre><code>&lt;div class="display-grid gap-1"&gt;
   &lt;div class="width-6"&gt;...&lt;/div&gt;
   &lt;div class="width-6"&gt;...&lt;/div&gt;
   ...
@@ -77,7 +77,7 @@
 
   <section class="margin-bottom-3">
     <h2 id="height">Height</h2>
-    <div class="grid gap-1">
+    <div class="display-grid gap-1">
       <div class="width-12-xs width-12-md width-6-lg height-2-lg bg-primary padding-1 outline">
         <code>.height-2</code>
       </div>
@@ -89,7 +89,7 @@
       </div>
     </div>
     <br>
-<pre><code>&lt;div class="grid gap-1"&gt;
+<pre><code>&lt;div class="display-grid gap-1"&gt;
   &lt;div class="width-12-xs width-12-md width-6-lg height-2-lg"&gt;...&lt;/div&gt;
   &lt;div class="width-12-xs width-6-md"&gt;...&lt;/div&gt;
   &lt;div class="width-12-xs width-6-md"&gt;...&lt;/div&gt;
@@ -100,7 +100,7 @@
     <h2 id="auto-fill">Auto-fill</h2>
     <p>Fill items as they appear</p>
     <p>Optional: <code>.grid[style="--min-width: &lt;length&gt;"]</code></p>
-    <div class="grid gap-1 auto-fill">
+    <div class="display-grid gap-1 auto-fill">
       <div class="bg-primary padding-1 outline"><code>div</code></div>
       <div class="bg-primary padding-1 outline"><code>div</code></div>
       <div class="bg-primary padding-1 outline"><code>div</code></div>
@@ -109,7 +109,7 @@
       <div class="bg-primary padding-1 outline"><code>div</code></div>
     </div>
     <br>
-<pre><code>&lt;div class="grid auto-fill gap-1"&gt;
+<pre><code>&lt;div class="display-grid auto-fill gap-1"&gt;
   &lt;div&gt;...&lt;/div&gt;
   &lt;div&gt;...&lt;/div&gt;
   &lt;div&gt;...&lt;/div&gt;
@@ -121,29 +121,29 @@
     <h2 id="gap">Gap</h2>
     <p><code>.grid.gap-<em>n</em> (0-5)</code></p>
     <div class="margin-bottom-2">
-      <div class="grid gap-3">
+      <div class="display-grid gap-3">
         <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
+          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
         </div>
         <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
+          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
         </div>
         <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
+          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
         </div>
       </div>
     </div>
     <p><code>.grid[style="--gap: <em>&lt;length&gt;</em>"]</code></p>
     <div class="margin-bottom-1">
-      <div class="grid" style="--gap: 3em;">
+      <div class="display-grid" style="--gap: 3em;">
         <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
+          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
         </div>
         <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
+          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
         </div>
         <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
+          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
         </div>
       </div>
     </div>
