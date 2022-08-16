@@ -1,12 +1,12 @@
 {
-  "name": "hyper-grid-css",
+  "name": "@subcomponents/grid",
   "version": "3.2.0",
   "description": "CSS layout library",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyallan/hyper-grid-css.git"
+    "url": "git+https://github.com/subcomponents/grid.git"
   },
-  "abstract": "CSS utility library to build layouts",
+  "introduction": "CSS layout library",
   "keywords": [
     "css",
     "flexbox",
@@ -27,12 +27,12 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heyallan/hyper-grid-css/issues"
+    "url": "https://github.com/subcomponents/grid/issues"
   },
-  "homepage": "https://heyallan.github.io/hyper-grid-css",
+  "homepage": "https://subcomponents.github.io/grid",
   "main": "dist/grid.min.css",
   "repo": {
-    "url": "https://github.com/heyallan/hyper-grid-css"
+    "url": "https://github.com/subcomponents/grid"
   },
   "keyword": "grid",
   "devDependencies": {

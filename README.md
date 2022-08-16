@@ -1,4 +1,4 @@
-# @hyper-grid-css
+# @subcomponents/grid
 
 ![License][LicenseBadgeURL]
 [![Donate][DonateBadgeURL]][DonateURL]
@@ -7,7 +7,7 @@
 
 ## Documentation
 
-Docs and demo: <https://heyallan.github.io/hyper-grid-css>
+Docs and demo: <https://subcomponents.github.io/grid>
 
 ## Contribute
 
