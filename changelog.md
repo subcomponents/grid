@@ -1,5 +1,11 @@
 # changelog
 
+## 3.2.1
+
+- use native flexbox gap
+- move alignment classes to @subcomponents/properties
+- drop -xs in favor of plain default classes
+
 ## 3.2.0
 
 - add `.display-flex` (alias `.flex`)

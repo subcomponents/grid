@@ -10,30 +10,30 @@
   grid-template-columns: repeat(auto-fill, minmax(var(--min-width), 1fr))
 }
 
-.width-1, .width-1-xs { grid-column-end: span 1; }
-.width-2, .width-2-xs { grid-column-end: span 2; }
-.width-3, .width-3-xs { grid-column-end: span 3; }
-.width-4, .width-4-xs { grid-column-end: span 4; }
-.width-5, .width-5-xs { grid-column-end: span 5; }
-.width-6, .width-6-xs { grid-column-end: span 6; }
-.width-7, .width-7-xs { grid-column-end: span 7; }
-.width-8, .width-8-xs { grid-column-end: span 8; }
-.width-9, .width-9-xs { grid-column-end: span 9; }
-.width-10, .width-10-xs { grid-column-end: span 10; }
-.width-11, .width-11-xs { grid-column-end: span 11; }
-.width-12, .width-12-xs { grid-column-end: span 12; }
-.height-1, .height-1-xs { grid-row-end: span 1; }
-.height-2, .height-2-xs { grid-row-end: span 2; }
-.height-3, .height-3-xs { grid-row-end: span 3; }
-.height-4, .height-4-xs { grid-row-end: span 4; }
-.height-5, .height-5-xs { grid-row-end: span 5; }
-.height-6, .height-6-xs { grid-row-end: span 6; }
-.height-7, .height-7-xs { grid-row-end: span 7; }
-.height-8, .height-8-xs { grid-row-end: span 8; }
-.height-9, .height-9-xs { grid-row-end: span 9; }
-.height-10, .height-10-xs { grid-row-end: span 10; }
-.height-11, .height-11-xs { grid-row-end: span 11; }
-.height-12, .height-12-xs { grid-row-end: span 12; }
+.width-1 { grid-column-end: span 1; }
+.width-2 { grid-column-end: span 2; }
+.width-3 { grid-column-end: span 3; }
+.width-4 { grid-column-end: span 4; }
+.width-5 { grid-column-end: span 5; }
+.width-6 { grid-column-end: span 6; }
+.width-7 { grid-column-end: span 7; }
+.width-8 { grid-column-end: span 8; }
+.width-9 { grid-column-end: span 9; }
+.width-10 { grid-column-end: span 10; }
+.width-11 { grid-column-end: span 11; }
+.width-12 { grid-column-end: span 12; }
+.height-1 { grid-row-end: span 1; }
+.height-2 { grid-row-end: span 2; }
+.height-3 { grid-row-end: span 3; }
+.height-4 { grid-row-end: span 4; }
+.height-5 { grid-row-end: span 5; }
+.height-6 { grid-row-end: span 6; }
+.height-7 { grid-row-end: span 7; }
+.height-8 { grid-row-end: span 8; }
+.height-9 { grid-row-end: span 9; }
+.height-10 { grid-row-end: span 10; }
+.height-11 { grid-row-end: span 11; }
+.height-12 { grid-row-end: span 12; }
 
 @media (--breakpoint-sm) {
   .width-1-sm { grid-column-end: span 1; }
