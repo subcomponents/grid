@@ -31,7 +31,7 @@
 
 .flex,
 .display-flex {
-  --grow: 0; /* columns don't grow by default to preserve layout, for flexible columns use width class */
+  --grow: 0; /* columns don't grow by default to preserve layout, for flexible columns use width classes */
   --shrink: 1;
   --basis: auto;
   --min-width: 0;

@@ -40,310 +40,388 @@
     </div>
     <p><!--spacer--></p>
 <pre><code>&lt;div class="display-flex gap-1"&gt;
-&lt;div class="width-6"&gt;...&lt;/div&gt;
-&lt;div class="width-6"&gt;...&lt;/div&gt
-...
+  &lt;div class="width-6"&gt;...&lt;/div&gt;
+  &lt;div class="width-6"&gt;...&lt;/div&gt
+  ...
 &lt;/div&gt;</code></pre>
   </section>
 
+
   <section class="margin-bottom-3">
     <h2 id="flexible-widths">Flexible widths</h2>
-    <p>Flexible widths support <code>--min-width: <em>&lt;value&gt;</em></code> </p>
-    <div class="flex-wrapper bg-primary padding-y-1 outline">
-      <div class="display-flex gap-1">
-        <div class="width-max">
-          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
-        </div>
-        <div class="width-min">
-          <div class="bg-primary padding-1 outline"><code>.width-min</code></div>
-        </div>
+    <p>Supports inline values: <code>--min-width: <em>&lt;value&gt;</em></code> </p>
+
+    <div class="display-flex gap-1 | bg-primary padding-y-1 outline | margin-bottom-2">
+      <div class="width-max | bg-primary padding-1 outline">
+        <code>.width-max</code>
       </div>
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>.width-min</code>
+      </div><!--/flex-->
     </div>
-    <br>
-    <div class="flex-wrapper bg-primary padding-y-1 outline">
-      <div class="display-flex gap-1">
-        <div class="width-auto">
-          <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
-        </div>
-        <div class="width-auto">
-          <div class="bg-primary padding-1 outline"><code>.width-auto</code></div>
-        </div>
+
+    <div class="display-flex gap-1 | bg-primary padding-y-1 outline">
+      <div class="width-auto | bg-primary padding-1 outline">
+        <code>.width-auto</code>
+      </div>
+      <div class="width-auto | bg-primary padding-1 outline">
+        <code>.width-auto</code>
       </div>
     </div>
   </section>
+
 
   <section class="margin-bottom-3">
     <h2 id="offset">Offset (1-11)</h2>
     <p><code>.display-flex</code></p>
-    <div class="flex-wrapper bg-primary padding-y-1 outline">
-      <div class="display-flex">
-        <div class="width-4-xs offset-2-xs">
-          <div class="bg-primary padding-1 outline"><code>.offset-2</code></div>
-        </div><!-- /.col -->
-      </div><!-- /.display-flex -->
-    </div>
+    <div class="display-flex | bg-primary padding-y-1 outline">
+      <div class="width-4 offset-2 | bg-primary padding-1 outline">
+        <code>.offset-2</code>
+      </div><!-- /.col -->
+    </div><!-- /.display-flex -->
   </section>
+
 
   <section class="margin-bottom-3">
     <h2 id="justify">Justify (main axis)</h2>
-    <p><code>.display-flex.justify-start</code></p>
-    <div class="flex-wrapper bg-primary padding-y-1 outline">
-      <div class="display-flex gap-1 justify-start-xs">
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-      </div><!-- /.display-flex -->
-    </div>
+    <p><code>.justify-start</code></p>
+    <div class="display-flex justify-start gap-1 | bg-primary padding-y-1 outline">
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>1</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>2</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>3</code>
+      </div><!-- /.col -->
+    </div><!-- /.display-flex -->
     <p><!--spacer--></p>
-    <p><code>.display-flex.justify-center</code></p>
-    <div class="flex-wrapper padding-y-1 bg-primary outline">
-      <div class="display-flex gap-1 justify-center-xs">
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-      </div><!-- /.display-flex -->
-    </div>
+    <p><code>.justify-center</code></p>
+    <div class="display-flex justify-center gap-1 | padding-y-1 bg-primary outline">
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>1</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>2</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>3</code>
+      </div><!-- /.col -->
+    </div><!-- /.display-flex -->
     <p><!--spacer--></p>
-    <p><code>.display-flex.justify-end</code></p>
-    <div class="flex-wrapper padding-y-1 bg-primary outline">
-      <div class="display-flex gap-1 justify-end-xs">
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-      </div><!-- /.display-flex -->
-    </div>
+    <p><code>.justify-end</code></p>
+    <div class="display-flex justify-end gap-1 | padding-y-1 bg-primary outline">
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>1</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>2</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>3</code>
+      </div><!-- /.col -->
+    </div><!-- /.display-flex -->
     <p><!--spacer--></p>
-    <p><code>.display-flex.justify-between</code></p>
-    <div class="flex-wrapper padding-y-1 bg-primary outline">
-      <div class="display-flex justify-between-xs">
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-      </div><!-- /.display-flex -->
-    </div>
+    <p><code>.justify-between</code></p>
+    <div class="display-flex justify-between | padding-y-1 bg-primary outline">
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>1</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>2</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>3</code>
+      </div><!-- /.col -->
+    </div><!-- /.display-flex -->
     <p><!--spacer--></p>
-    <p><code>.display-flex.justify-around</code></p>
-    <div class="flex-wrapper padding-y-1 bg-primary outline">
-      <div class="display-flex justify-around-xs">
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
+    <p><code>.justify-around</code></p>
+      <div class="display-flex justify-around | padding-y-1 bg-primary outline">
+        <div class="width-min | bg-primary padding-1 outline">
+          <code>1</code>
         </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
+        <div class="width-min | bg-primary padding-1 outline">
+          <code>2</code>
         </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
+        <div class="width-min | bg-primary padding-1 outline">
+          <code>3</code>
         </div><!-- /.col -->
       </div><!-- /.display-flex -->
-    </div>
     <p><!--spacer--></p>
-    <p><code>.display-flex.justify-evenly</code></p>
-    <div class="flex-wrapper padding-y-1 bg-primary outline">
-      <div class="display-flex justify-evenly-xs">
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-        <div class="width-12-xs width-3-md">
-          <div class="bg-primary padding-1 outline"><code>.width-3</code></div>
-        </div><!-- /.col -->
-      </div><!-- /.display-flex -->
-    </div>
+    <p><code>.justify-evenly</code></p>
+    <div class="display-flex justify-evenly | padding-y-1 bg-primary outline">
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>1</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>2</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>3</code>
+      </div><!-- /.col -->
+    </div><!-- /.display-flex -->
   </section>
+
+
 
   <section class="margin-bottom-3">
     <h2 id="align">Align (cross axis)</h2>
-    <p>Align can be applied to container as <code>.align-*</code> and to flex items as <code>.align-self-*</code></p>
+    <p class="font-weight-700">Container:</p>
+    <div class="display-flex gap-1 margin-bottom-2">
+      <div class="width-12 width-3-md">
+        <p><code>.align-stretch</code></p>
+        <div class="display-flex | padding-y-1 bg-primary outline text-align-center aspect-ratio-1/1">
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>1</code>
+          </div><!-- /.col -->
+          <div class="width-auto bg-primary padding-0.5 outline">
+            <code>2</code>
+          </div><!-- /.col -->
+          <div class="width-auto bg-primary padding-0.5 outline">
+            <code>3</code>
+          </div><!-- /.col -->
+        </div><!-- /.display-flex -->
+      </div><!-- /layout colum-->
+      <div class="width-12 width-3-md">
+        <p><code>.align-start</code></p>
+        <div class="display-flex align-start | padding-y-1 bg-primary outline text-align-center aspect-ratio-1/1">
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>1</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>2</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>3</code>
+          </div><!-- /.col -->
+        </div><!-- /.display-flex -->
+      </div><!-- /layout colum-->
+      <div class="width-12 width-3-md">
+        <p><code>.align-center</code></p>
+        <div class="display-flex align-center | padding-y-1 bg-primary outline text-align-center aspect-ratio-1/1">
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>1</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>2</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>3</code>
+          </div><!-- /.col -->
+        </div><!-- /.display-flex -->
+      </div>
+      <div class="width-12 width-3-md">
+        <p><code>.align-end</code></p>
+          <div class="display-flex align-end | padding-y-1 bg-primary outline text-align-center aspect-ratio-1/1">
+            <div class="width-auto | bg-primary padding-0.5 outline">
+              <code>1</code>
+            </div><!-- /.col -->
+            <div class="width-auto | bg-primary padding-0.5 outline">
+              <code>2</code>
+            </div><!-- /.col -->
+            <div class="width-auto | bg-primary padding-0.5 outline">
+              <code>3</code>
+            </div><!-- /.col -->
+          </div><!-- /.display-flex -->
+      </div>
+    </div>
+
+
+    <p class="font-weight-700">Flex items:</p>
     <div class="display-flex gap-1">
-      <div class="width-12 width-4-md">
-        <p><code>.display-flex.align-start</code></p>
-        <div class="flex-wrapper padding-y-1 bg-primary outline">
-          <div class="display-flex align-start-xs" style="min-height:220px;">
-            <div class="width-max">
-              <div class="bg-primary padding-1 outline"><code>.align-start</code></div>
-            </div><!-- /.col -->
-          </div><!-- /.display-flex -->
-        </div>
+      <div class="width-12 width-3-md">
+        <p><code>.align-self-stretch</code></p>
+        <div class="display-flex | padding-y-1 bg-primary outline text-align-center aspect-ratio-1/1">
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>1</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>2</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>3</code>
+          </div><!-- /.col -->
+        </div><!-- /.display-flex -->
       </div>
-      <div class="width-12 width-4-md">
-        <p><code>.display-flex.align-center</code></p>
-        <div class="flex-wrapper padding-y-1 bg-primary outline">
-          <div class="display-flex align-center-xs" style="min-height:220px;">
-            <div class="width-max">
-              <div class="bg-primary padding-1 outline"><code>.align-center</code></div>
-            </div><!-- /.col -->
-          </div><!-- /.display-flex -->
-        </div>
+      <div class="width-12 width-3-md">
+        <p><code>.align-self-start</code></p>
+        <div class="display-flex | padding-y-1 bg-primary outline text-align-center aspect-ratio-1/1">
+          <div class="width-auto align-self-start | bg-primary padding-0.5 outline">
+            <code>1</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>2</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>3</code>
+          </div><!-- /.col -->
+        </div><!-- /.display-flex -->
       </div>
-      <div class="width-12 width-4-md">
-        <p><code>.display-flex.align-end</code></p>
-        <div class="flex-wrapper padding-y-1 bg-primary outline">
-          <div class="display-flex align-end-xs" style="min-height:220px;">
-            <div class="width-max">
-              <div class="bg-primary padding-1 outline"><code>.align-end</code></div>
-            </div><!-- /.col -->
-          </div><!-- /.display-flex -->
-        </div>
+      <div class="width-12 width-3-md">
+        <p><code>.align-self-center</code></p>
+        <div class="display-flex | padding-y-1 bg-primary outline text-align-center aspect-ratio-1/1">
+          <div class="width-auto align-self-center | bg-primary padding-0.5 outline">
+            <code>1</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>2</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>3</code>
+          </div><!-- /.col -->
+        </div><!-- /.display-flex -->
+      </div>
+      <div class="width-12 width-3-md">
+        <p><code>.align-self-end</code></p>
+        <div class="display-flex | padding-y-1 bg-primary outline text-align-center aspect-ratio-1/1">
+          <div class="width-auto align-self-end | bg-primary padding-0.5 outline">
+            <code>1</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>2</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-0.5 outline">
+            <code>3</code>
+          </div><!-- /.col -->
+        </div><!-- /.display-flex -->
       </div>
     </div>
   </section>
 
   <section class="margin-bottom-3">
     <h2 id="order">Order</h2>
-    <p><code>.display-flex</code></p>
-    <div class="flex-wrapper bg-primary padding-y-1 outline">
-      <div class="display-flex gap-1">
-        <div class="width-4-xs order-last">
-          <div class="bg-primary padding-1 outline"><code>.order-last (1)</code></div>
-        </div><!-- /.col -->
-        <div class="width-4-xs">
-          <div class="bg-primary padding-1 outline"><code>2</code></div>
-        </div><!-- /.col -->
-        <div class="width-4-xs">
-          <div class="bg-primary padding-1 outline"><code>3</code></div>
-        </div><!-- /.col -->
-      </div><!-- /.display-flex -->
-    </div>
+    <p><code>.order-last</code></p>
+
+    <div class="display-flex gap-1 | bg-primary padding-y-1 outline">
+      <div class="width-min order-last | bg-primary padding-1 outline">
+        <code>(1) .order-last</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>2</code>
+      </div><!-- /.col -->
+      <div class="width-min | bg-primary padding-1 outline">
+        <code>3</code>
+      </div><!-- /.col -->
+    </div><!-- /.display-flex -->
+
     <p><!--spacer--></p>
-    <p><code>.display-flex</code></p>
-    <div class="flex-wrapper bg-primary padding-y-1 outline">
-      <div class="display-flex gap-1">
-        <div class="width-4-xs">
-          <div class=" bg-primary padding-1 outline"><code>1</code></div>
-        </div><!-- /.col -->
-        <div class="width-4-xs">
-          <div class=" bg-primary padding-1 outline"><code>2</code></div>
-        </div><!-- /.col -->
-        <div class="width-4-xs order-first">
-          <div class=" bg-primary padding-1 outline"><code>.order-first (3)</code></div>
-        </div><!-- /.col -->
-      </div><!-- /.display-flex -->
-    </div>
+    <p><code>.order-first</code></p>
+    <div class="display-flex gap-1 | bg-primary padding-y-1 outline">
+      <div class="width-4-xs | bg-primary padding-1 outline">
+        <code>1</code>
+      </div><!-- /.col -->
+      <div class="width-4-xs | bg-primary padding-1 outline">
+        <code>2</code>
+      </div><!-- /.col -->
+      <div class="width-4-xs order-first | bg-primary padding-1 outline">
+        <code>(3) .order-first</code>
+      </div><!-- /.col -->
+    </div><!-- /.display-flex -->
   </section>
 
+
   <section class="margin-bottom-3">
-    <h2 id="direction">Direction</h2>
-    <p><code>.display-flex.row</code> (default)</p>
-    <div class="flex-wrapper bg-primary padding-y-1 outline">
-      <div class="display-flex gap-1 row">
-        <div class="width-4-xs">
-          <div class="bg-primary padding-1 outline"><code>1</code></div>
+    <h2 id="direction">Direction (Row)</h2>
+    <p><code>.display-flex</code> (default)</p>
+      <div class="display-flex gap-1 | bg-primary padding-y-1 outline">
+        <div class="width-min | bg-primary padding-1 outline">
+          <code>1</code>
         </div><!-- /.col -->
-        <div class="width-4-xs">
-          <div class="bg-primary padding-1 outline"><code>2</code></div>
+        <div class="width-min | bg-primary padding-1 outline">
+          <code>2</code>
         </div><!-- /.col -->
-        <div class="width-4-xs">
-          <div class="bg-primary padding-1 outline"><code>3</code></div>
-        </div><!-- /.col -->
-      </div><!-- /.display-flex -->
-    </div>
-    <p><!--spacer--></p>
-    <p><code>.display-flex.row.reverse</code></p>
-    <div class="flex-wrapper bg-primary padding-y-1 outline">
-      <div class="display-flex gap-1 row reverse">
-        <div class="width-4-xs">
-          <div class="bg-primary padding-1 outline"><code>1</code></div>
-        </div><!-- /.col -->
-        <div class="width-4-xs">
-          <div class="bg-primary padding-1 outline"><code>2</code></div>
-        </div><!-- /.col -->
-        <div class="width-4-xs">
-          <div class="bg-primary padding-1 outline"><code>3</code></div>
+        <div class="width-min | bg-primary padding-1 outline">
+          <code>3</code>
         </div><!-- /.col -->
       </div><!-- /.display-flex -->
-    </div>
     <p><!--spacer--></p>
+    <p><code>.display-flex.reverse</code></p>
+      <div class="display-flex gap-1 reverse | bg-primary padding-y-1 outline">
+        <div class="width-min | bg-primary padding-1 outline">
+          <code>1</code>
+        </div><!-- /.col -->
+        <div class="width-min | bg-primary padding-1 outline">
+          <code>2</code>
+        </div><!-- /.col -->
+        <div class="width-min | bg-primary padding-1 outline">
+          <code>3</code>
+        </div><!-- /.col -->
+      </div><!-- /.display-flex -->
+    <p><!--spacer--></p>
+
+    <h2 id="direction">Direction (Column)</h2>
     <div class="display-flex gap-1">
-      <div class="width-12 width-6-md">
-        <p><code>.display-flex.column</code></p>
-        <div class="flex-wrapper bg-primary padding-y-1 outline">
-          <div class="display-flex gap-1 column">
-            <div class="width-4-xs">
-              <div class="bg-primary padding-1 outline"><code>1</code></div>
+      <div class="width-auto">
+        <p><code>.column</code></p>
+          <div class="display-flex column gap-1 | bg-primary padding-y-1 outline">
+            <div class="width-auto | bg-primary padding-1 outline">
+              <code>1</code>
             </div><!-- /.col -->
-            <div class="width-4-xs">
-              <div class="bg-primary padding-1 outline"><code>2</code></div>
+            <div class="width-auto | bg-primary padding-1 outline">
+              <code>2</code>
             </div><!-- /.col -->
-            <div class="width-4-xs">
-              <div class="bg-primary padding-1 outline"><code>3</code></div>
+            <div class="width-auto | bg-primary padding-1 outline">
+              <code>3</code>
             </div><!-- /.col -->
           </div><!-- /.display-flex -->
-        </div>
       </div>
-      <div class="width-12 width-6-md">
-        <p><code>.display-flex.column.reverse</code></p>
-        <div class="flex-wrapper bg-primary padding-y-1 outline">
-          <div class="display-flex gap-1 column reverse">
-            <div class="width-4-xs">
-              <div class="bg-primary padding-1 outline"><code>1</code></div>
-            </div><!-- /.col -->
-            <div class="width-4-xs">
-              <div class="bg-primary padding-1 outline"><code>2</code></div>
-            </div><!-- /.col -->
-            <div class="width-4-xs">
-              <div class="bg-primary padding-1 outline"><code>3</code></div>
-            </div><!-- /.col -->
-          </div><!-- /.display-flex -->
-        </div>
+      <div class="width-auto">
+        <p><code>.column.reverse</code></p>
+        <div class="display-flex column reverse gap-1 | bg-primary padding-y-1 outline">
+          <div class="width-auto | bg-primary padding-1 outline">
+            <code>1</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-1 outline">
+            <code>2</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-1 outline">
+            <code>3</code>
+          </div><!-- /.col -->
+        </div><!-- /.display-flex -->
+      </div>
+      <div class="width-auto">
+        <p><code>.column</code> (variable height)</p>
+        <div class="display-flex column gap-1 | bg-primary padding-y-1 outline" style="height: 350px;">
+          <div class="width-min | bg-primary padding-1 outline">
+            <code>.width-min</code>
+          </div><!-- /.col -->
+          <div class="width-auto | bg-primary padding-1 outline">
+            <code>.width-auto</code>
+          </div><!-- /.col -->
+          <div class="width-min | bg-primary padding-1 outline">
+            <code>.width-min</code>
+          </div><!-- /.col -->
+        </div><!-- /.display-flex -->
       </div>
     </div>
   </section>
 
   <section class="margin-bottom-3">
     <h2 id="gap">Gap</h2>
-    <p><code>.display-flex.gap-<em>n</em> (0-5)</code></p>
-    <div class="flex-wrapper margin-bottom-2">
-      <div class="display-flex gap-3">
-        <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
-        </div>
-        <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
-        </div>
-        <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
-        </div>
+    <p><code>.display-flex.gap-<em>n</em> [0-5]</code></p>
+    <div class="display-flex gap-1 | margin-bottom-2">
+      <div class="width-auto | bg-primary padding-1 outline">
+        <code>.width-auto</code>
+      </div>
+      <div class="width-auto | bg-primary padding-1 outline">
+        <code>.width-auto</code>
+      </div>
+      <div class="width-auto | bg-primary padding-1 outline">
+        <code>.width-auto</code>
       </div>
     </div>
-    <p><code>.display-flex[style="--gap: <em>&lt;length&gt;</em>"]</code></p>
-    <div class="margin-bottom-1">
-      <div class="display-flex" style="--gap: 3em;">
-        <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
-        </div>
-        <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
-        </div>
-        <div class="width-12-xs width-4-md">
-          <div class="bg-primary padding-1 outline"><code>.width-max</code></div>
-        </div>
-      </div>
+  </div>
+  <p><code>.display-flex[style="--gap: <em>&lt;length&gt;</em>"]</code></p>
+  <div class="display-flex | margin-bottom-1" style="--gap: 1em;">
+    <div class="width-auto | bg-primary padding-1 outline">
+      <code>.width-auto</code>
+    </div>
+    <div class="width-auto | bg-primary padding-1 outline">
+      <code>.width-auto</code>
+    </div>
+    <div class="width-auto | bg-primary padding-1 outline">
+      <code>.width-auto</code>
     </div>
   </section>
 
